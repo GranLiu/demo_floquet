@@ -1,6 +1,19 @@
 # demo_floquet
- A demo of developing floquet analysis for antenna arrays.
+
+## Description
+
+A demo of developing floquet analysis for antenna arrays.
+
+## Timeline
+
+- To be continue.
 
 ## Contacts
-Author: liu_xii@qq.com
-Co-author: fengyanlover@foxmail.com
+
+Author: **刘雍熙** liu_xii@qq.com *Xi'an Jiaotong University*
+
+Co-author: **李 蝶** fengyanlover@foxmail.com *Xi'an Jiaotong University*
+
+## Reference
+
+- Phased Array Antennas: Floquet Analysis, Synthesis, BFNs and Active Array Systems, **ARUN K. BHATTACHARYYA**.
