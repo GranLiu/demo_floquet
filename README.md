@@ -5,7 +5,7 @@
 A demo of developing floquet analysis for antenna arrays.
 
 - The aim of this demo is using Floquet modes to perform array analysis, especially the mutual coupling between antenna elements.
-- "The embedded element pattern that includes mutual coupling effects can be determined directly from the indinite array results." -- [1,CH2]
+- "The embedded element pattern that includes mutual coupling effects can be determined directly from the infinite array results." -- [1,CH2]
 
 ## Timeline
 
