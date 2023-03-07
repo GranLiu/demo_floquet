@@ -20,6 +20,7 @@ h = 0.05*lbd;
 ep_r = 2.0;
 ep_0 = 8.854*1e-12;
 mu_0 = 1.256*1e-6;
+% m = -100:1:100;
 m = -20:1:20;
 n = m;
 d_ang = 0.1;
@@ -61,7 +62,7 @@ z_fl_imag_e = imag(Z_fl_e);
 
 figure(); hold on;
 plot(theta/pi*180,z_fl_real_e);
-plot(theta/pi*180,z_fl_imag_e,'--');
+plot(theta/pi*180,z_fl_imag_e+136,'--');
 ylim([-50,50]);
 xlabel("Scan angle (degree)",'interpreter','latex','fontsize',12);
 ylabel("$R,X~(\Omega)$",'interpreter','latex','fontsize',12);
@@ -156,11 +157,11 @@ grid on;
 set(gca,'LooseInset',get(gca,'TightInset'));
 
 %% reflection coefficient
-z_0 = Z_fl_e(1);
+z_0 = conj(Z_fl_e(1));
 
-ref_co_e = abs( (Z_fl_e-z_0)./(Z_fl_e+z_0) );
-ref_co_h = abs( (Z_fl_h-z_0)./(Z_fl_h+z_0) );
-ref_co_d = abs( (Z_fl_d-z_0)./(Z_fl_d+z_0) );
+ref_co_e = abs( (Z_fl_e-conj(z_0))./(Z_fl_e+z_0) );
+ref_co_h = abs( (Z_fl_h-conj(z_0))./(Z_fl_h+z_0) );
+ref_co_d = abs( (Z_fl_d-conj(z_0))./(Z_fl_d+z_0) );
 
 figure(); hold on;
 plot(theta/pi*180,ref_co_e);
