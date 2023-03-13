@@ -7,6 +7,8 @@ clc;
 clear;
 close all;
 
+addpath("./func");
+
 %% simulation params
 f = 2e9;
 w = 2*pi*f;

@@ -1,10 +1,10 @@
 % -------------------------------------------------------------------------
-% Realize Fig.3.4 & Fig.3.5 in Phased Array Antennas.
+% Realize Fig.3.8 in Phased Array Antennas.
 % 
 % Yongxi Liu, Xi'an Jiaotong University, 2023-03.
 % -------------------------------------------------------------------------
 clc;
-% clear;
+clear;
 close all;
 
 %% simulation params
