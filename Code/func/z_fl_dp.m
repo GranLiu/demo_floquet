@@ -2,7 +2,7 @@ function [R,X] = z_fl_dp(theta,phi,ep_r,a,b,h,l,t)
 % -------------------------------------------------------------------------
 % Compute the Floquet impedance of an infinite array composed of printed
 % dipoles, given the scan angle.
-% 
+%
 % Input
 %	theta: scan polar angle, in radian
 %	phi: azimuth angle, in radian
@@ -19,9 +19,25 @@ function [R,X] = z_fl_dp(theta,phi,ep_r,a,b,h,l,t)
 % Reference
 % [1] Phased Array Antennas: Floquet Analysis, Synthesis, BFNs and Active
 %     Array Systems, ARUN K. BHATTACHARYYA.
-% 
+%
 % Yongxi Liu, Xi'an Jiaotong University, 2023-03.
 % -------------------------------------------------------------------------
+%% check inputs
+if nargin~= 8
+    error("There should be 8 inputs in this func.");
+end
+numchk = {'numeric'};
+poschk = {'positive'};
+validateattributes(theta,numchk,{'>=',0,'<=',2*pi})
+validateattributes(phi,numchk,{'>=',0,'<=',2*pi})
+validateattributes(ep_r,numchk,poschk)
+validateattributes(a,numchk,poschk)
+validateattributes(b,numchk,poschk)
+validateattributes(h,numchk,poschk)
+validateattributes(l,numchk,poschk)
+validateattributes(t,numchk,poschk)
+
+%% params
 ep_0 = 8.854*1e-12;
 mu_0 = 1.256*1e-6;
 m = -20:1:20;
@@ -29,6 +45,7 @@ n = m;
 k0 = 2*pi;
 w = 3e8*k0;
 
+%% simulation
 kx0 = k0*sin(theta)*cos(phi);
 ky0 = k0*sin(theta)*sin(phi);
 kxmn = zeros(length(m),length(n));
@@ -57,4 +74,3 @@ Z_fl = sum( l^2/(a*b)*(kymn.^2./y_te+kxmn.^2./y_tm).*...
 R = real(Z_fl);
 X = imag(Z_fl);
 end
-
