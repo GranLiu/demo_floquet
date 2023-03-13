@@ -9,9 +9,9 @@ A demo of developing floquet analysis for antenna arrays.
 
 ## Timeline
 
-- 02.22 ~ 03.01  Review the basic concepts of floquet modal analysis, discuss the procedure of simulation
-- 03.01 ~ 03.08  Fig. 3.4, Fig. 3.5
-- 03.08 ~ 03.15  Fig. 3.8, Fig. 3.9
+- 02.22 ~ 03.01  √ Review the basic concepts of floquet modal analysis, discuss the procedure of simulation
+- 03.01 ~ 03.08  √ Fig. 3.4, Fig. 3.5
+- 03.08 ~ 03.15  √ Fig. 3.8, Fig. 3.9
 - 03.15 ~ 03.22  Fig. 3.11, Fig. 3.12
 - 03.22 ~ 03.29  Fig. 4.4, Fig. 4.5
 - 03.29 ~ 04.05  Fig. 4.7
