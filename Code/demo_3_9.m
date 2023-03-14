@@ -39,11 +39,11 @@ for idx = 1:length(theta)
     nrt_p = sin_p*sinc( k0*(l/2)*sin_t*cos_p/pi ) *...
         sinc( k0*(t/2)*sin_t*sin_p/pi );
     dnrt_p = 1 - 1j*sqrt(ep_r-sin_t^2)*cot(k0*h*sqrt(ep_r-sin_t^2))/cos_t;
-    E_p = 1j*I_inc*Z_0*l*(2*R_g/(R_fl+R_g+1j*(X_fl+X_g))) * nrt_p/dnrt_p;
+    E_p = 1j*I_inc*Z_0*l*( 2*R_g/(R_fl+R_g+1j*(X_fl+X_g)) ) * nrt_p/dnrt_p;
     nrt_t = cos_t*cos_p*sinc( k0*(l/2)*sin_t*cos_p/pi ) *...
         sinc( k0*(t/2)*sin_t*sin_p/pi );
     dnrt_t = 1 - 1j*ep_r*cos_t/sqrt(ep_r-sin_t^2)*cot(k0*h*sqrt(ep_r-sin_t^2));
-    E_t = -1j*I_inc*Z_0*l*(2*R_g/(R_fl+R_g+1j*(X_fl+X_g))) * nrt_t/dnrt_t;
+    E_t = -1j*I_inc*Z_0*l*( 2*R_g/(R_fl+R_g+1j*(X_fl+X_g)) ) * nrt_t/dnrt_t;
     G_e(idx) = sqrt( (abs(E_p)^2+abs(E_t)^2)/Z_0 );
 end
 G_e = 20*log10(G_e);
