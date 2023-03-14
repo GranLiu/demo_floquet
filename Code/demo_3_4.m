@@ -44,6 +44,7 @@ for idx_i = 1:length(theta)
         end
     end
 
+    % if kz is pure imaginary, add minus sign
     kzmn_p = sqrt(k0^2-kxmn.^2-kymn.^2);
     kzmn_m = sqrt(ep_r*k0^2-kxmn.^2-kymn.^2);
     kzmn_p(imag(kzmn_p)~=0) = -kzmn_p(imag(kzmn_p)~=0);
